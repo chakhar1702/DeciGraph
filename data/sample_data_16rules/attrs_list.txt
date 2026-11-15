@@ -1,0 +1,11 @@
+1  1  Building_Century
+2  1  Area_Covered
+3  1  Current_Condition
+4  1  Costs_of_Intervention
+5  1  Current_Reuse_Process
+6  1  Principal_Function
+7  1 Current_Management
+8  1 Economic_Self_Sustainability
+9  1  Local_Identity_Enhancement:
+10  1 Community_Engagement
+11  1 Urban_Regeneration

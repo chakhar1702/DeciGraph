@@ -1,0 +1,5 @@
+1  -1  A1_Date_of_Construction
+2   1  A2_Area_Covered 
+3  -1  A3_Current_Condition
+4  -1  A4_Costs_of_Intervention
+5   1  A8_Economic_Self_Sustainability

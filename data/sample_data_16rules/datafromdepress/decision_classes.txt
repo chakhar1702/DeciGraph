@@ -1,0 +1,5 @@
+1  minimal
+2  mild
+3  moderate
+4  severe
+

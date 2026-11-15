@@ -1,0 +1,16 @@
+15 3000 Restored 1550000.00 Yes
+20 1000 Partially_restored 42335.30 Yes
+14 200 Partially_restored 920937.37 Yes
+16 150 Partially_restored 100105.13 No
+18 1459.56 Partially_restored 500000.00 No
+10 1720 Partially_restored 1179793.20 No
+11 1465.31 Restoration_on_going 0 Yes
+10 4000 Restored 1710298.21 Yes
+19 1000 To_be_restored 3500000.00 No
+15 970 Restored 2473914.97 Yes
+18 1900 Restored 1328470.85 Yes
+18 150 Restored 39400.48 No
+11 4400 Restored 3778368.93 Yes
+13 1300 Restored 3135879.53 No
+11 4000 Restored 10300000.00 No
+20 2500 Restored 608714.00 Yes

@@ -1,0 +1,5 @@
+18 1200 to_be_restored 600000 NA cultural partnership no
+17 4500	 to_be_restored	9900000 NA cultural partnership	yes
+18  8500 to_be_restored	18700000 NA cultural partnership	yes
+19 3900	to_be_restored	8580000 NA cultural partnership	yes
+20 2500	to_be_restored	5500000 NA cultural partnership	yes
