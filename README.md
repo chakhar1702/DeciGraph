@@ -82,4 +82,4 @@ data/                        Input files
 
 ## Contact
 
-Dr Salem Chakhar, University of Portsmouth: salem.chakhar@port.ac.uk
+Dr Salem Chakhar, University of Portsmouth: salem.chakhar [at] port.ac.uk
