@@ -16,9 +16,8 @@ Companion paper: Chakhar S., Panaro S., Greco S., Ishizaka A., Siraj S. (2027), 
 9. [Classifying objects and aggregating decisions](#9-classifying-objects-and-aggregating-decisions)
 10. [Worked example](#10-worked-example)
 11. [Troubleshooting](#11-troubleshooting)
-12. [Known limitations](#12-known-limitations)
-13. [Code reference](#13-code-reference)
-14. [Citation and contact](#14-citation-and-contact)
+12. [Code reference](#13-code-reference)
+13. [Citation and contact](#14-citation-and-contact)
 
 ---
 
@@ -287,23 +286,7 @@ By my reading of the code, `version = 2` (ordering only, the current default) le
 | An object is classified wrongly for an ordinal attribute | See section 12, item 2. |
 | `RecursionError` on very large graphs | The traversal is recursive. Raise the limit with `sys.setrecursionlimit`. |
 
-## 12. Known limitations
-
-1. **Strategies 2 and 3 can create nonexistent rules.** Strategy 2 is the current default in `deciGraph_main.py`.
-2. **Ordinal values are compared alphabetically.** For non-numeric values, `<=` and `>=` use plain text comparison, not the order of the attribute's domain. Conditions on attributes such as `Current_Condition` can then be judged wrongly. Numeric attributes are fine. On the Salerno data, the alphabetical order reproduces the supporting rules in Table 13 of the paper for the projects checked, so the case study is not affected, but other datasets with ordinal attributes may be.
-3. **Graph labels show identifiers.** In `print_graph_code()`, node labels show the condition number (or the condition number and attribute id), and edge labels show an attribute id, not the full text of the condition. Use the linearisation output to read the full rules until the label code is corrected.
-4. **`deci_node_shape` has no effect** in the active output function.
-5. **Console output only.** The graph code, rules and results are printed, not saved. The only file written is `poset.dot` (strategy 4).
-6. **Settings are in the code.** The strategy and aggregation operator are edited in `deciGraph_main.py`, not given on the command line.
-7. **Exploration is depth-first.** The paper describes breadth-first search (BFSL and BFSE), but the working linearisation (`printAllRulesasPaths.py`) and classification (`exploitation.py`) code uses depth-first search with backtracking. The set of rules found is the same, and only the order differs. The only breadth-first code in the repository is `Graph.BFSAllPaths` in `bfs_algorithm.py`, which is an unfinished draft that does not run (it reads `self.adj` while the class defines `self.graph`, and it depends on `config.node_id` and `config.obj_descrip`, which are never filled).
-8. **Edge duplicate checks are linear scans**, so very large rule bases will be slower than the linear time stated in the paper.
-9. **`distance_funcs.py` is experimental.** It is not called by the main script and is fixed to a 23 by 23 matrix.
-10. **The graph keeps the properties of the rule set**, including any redundancy or inconsistency in the rules.
-11. **Contradictory rules are not detected.** If an object is covered by an *at least* rule for a class above the class of an *at most* rule (so `l(x) > u(x)`), the tool does not report a conflict. With `"max"` it returns `u(x)`, which is below `l(x)`. Check the printed interval for such cases.
-12. **Bounds are computed differently from the single-type case.** With only one rule type, the tool takes the most restrictive class (lowest for *at most*, highest for *at least*). With mixed types, the interval uses the lowest *at least* class and the highest *at most* class, following Algorithm 6 of the paper. The two behaviours are both as published, but they can look inconsistent when comparing objects.
-13. **Missing values never satisfy a condition.** In the Salerno learning set, project 7 has a missing cost (`?`). The code cannot match the condition on cost for it (rule 9, `A4_Costs_of_Intervention<=39400.480000`), so it lists rules 8 and 11 for this project, while Table 13 of the paper also lists rule 9. The final class (High) is the same either way.
-
-## 13. Code reference
+## 12. Code reference
 
 | File | Role | Paper |
 |---|---|---|
@@ -327,12 +310,12 @@ By my reading of the code, `version = 2` (ordering only, the current default) le
 
 The functions rely on shared state in `config`. Before calling a strategy function, call `read_data_for_graph(...)` and set `config.nb_elem_conditions` and `config.nb_decisions`, as `main()` does. The strategy functions then set `config.nb_final_elem_conditions` and `config.final_conditions_list`.
 
-## 14. Citation and contact
+## 12. Citation and contact
 
 Please cite:
 
 > Chakhar S., Panaro S., Greco S., Ishizaka A., Siraj S. (2027). A novel decision graph model to visualise dominance based if-then decision rules. *Omega* 146, 103687. https://doi.org/10.1016/j.omega.2026.103687
 
-Contact: Salem Chakhar, University of Portsmouth, salem.chakhar@port.ac.uk
+Contact: Dr Salem Chakhar, University of Portsmouth, salem.chakhar@port.ac.uk
 
 The case study was part of the Horizon 2020 project CLIC (grant agreement No. 776758).
