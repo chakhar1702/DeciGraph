@@ -316,6 +316,6 @@ Please cite:
 
 > Chakhar S., Panaro S., Greco S., Ishizaka A., Siraj S. (2027). A novel decision graph model to visualise dominance based if-then decision rules. *Omega* 146, 103687. https://doi.org/10.1016/j.omega.2026.103687
 
-Contact: Dr Salem Chakhar, University of Portsmouth, salem.chakhar@port.ac.uk
+Contact: Dr Salem Chakhar, University of Portsmouth, salem.chakhar [at] port.ac.uk
 
 The case study was part of the Horizon 2020 project CLIC (grant agreement No. 776758).
